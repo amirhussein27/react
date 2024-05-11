@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <div id=root></div>
+</head>
+<body>
+    <div id="root"></div>
+  <script type="text/babel">
+class Username extends React.Component{
+render(){
+  return  <div className="form-element">
+      <label htmlfor="username">username</label>
+      <input type="text"/>
+    </div>
+}
+}
+
+class Password extends React.Component{
+render(){
+    return  <div className="form-element">
+      <label htmlfor="password">password</label>
+      <input type="text"/>
+    </div>
+}
+}
+
+class Button extends React.Component{
+render(){
+   return <button type="submit">submit</button>
+
+}
+}
+
+class Helloworld extends React.Component{
+render(){
+    return <form>
+  <Username/>
+  <Password/>
+  <Button/>
+
+
+  </form>
+}
+}
+
+
+let helloinstannce=new Helloworld()
+ReactDOM.render(<Helloworld/>,document.body)
+  </script>
+</body>
+</html>
