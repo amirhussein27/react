@@ -7,15 +7,56 @@
 <body>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
+<div id="container"></div>
 <script>
-    function hellowworld(){
+    // function hellowworld(){
 
-     let element=document.createElement('div')
+    //  let element=document.createElement('div')
 
-     return   React.createElement('div',null,'hellow world');
-    }
-    ReactDOM.render(hellowworld(),document.body)
+    //  return   React.createElement('div',null,'hellow world');
+    // }
+    // ReactDOM.render(hellowworld(),document.body)
+    function Cartgenerate(name, age) {
+  let cart = React.createElement(
+    "div",
+    { class: "cart" },
+    React.createElement("p", null, `name: ${name}`),
+    React.createElement("p", null, `age: ${age}`)
+);
+
+  // let vertical = document.createElement("div");
+  // vertical.classList.add("vertical");
+
+  // let ageel = document.createElement("p");
+  // ageel.innerText = `age:${age}`;
+
+  // let nameel = document.createElement("p");
+  // nameel.innerText = `name:${name}`;
+
+  // cart.appendChild(vertical);
+  // vertical.appendChild(nameel);
+  // vertical.appendChild(ageel);
+  // container.appendChild(cart);
+
+}
+let userdata = [
+  { name: "ali", age: 12 },
+  { name: "amir", age: 22 },
+  { name: "abbas", age: 32 },
+  { name: "abbas2", age: 322 },
+];
+
+
+
+let carts=userdata.map(data => {
+    return Cartgenerate(data.name, data.age)
+});
+
+let container = document.getElementById("container")
+const root = ReactDOM.createRoot(container);
+root.render(Cartgenerate)
+
+
 </script>
 </body>
 </html>

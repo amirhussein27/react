@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Time: 04:36:35</span> 
+<div>Time: 04:36:38</div>
+<script>
+    import { useState } from "react";
+
+const App = () => {
+ const [open, setOpen] = useState(false);
+
+ return (
+  <div className="App">
+   <button onClick={() => setOpen((prev) => !prev)}>toggle</button>
+   <div className={open ? "open" : "close"}>
+    I'm {open ? "opened" : "closed"}
+   </div>
+  </div>
+ );
+};
+export default App;
+</script>
+</body>
+</html>
