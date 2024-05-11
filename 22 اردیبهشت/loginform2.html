@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <div id=root></div>
+</head>
+<body style="background-color: rgb(59, 193, 255);">
+  <div id="container"></div>
+  <!-- <form>
+    <div class="form-element">
+      <label for="username">username</label>
+      <input type="text">
+    </div>
+    <div class="form-element">
+      <label for="password">password</label>
+      <input type="text">
+    </div>
+    <button type="submit">submit</button>
+  </form> -->
+  <script type="text/babel">
+    let container=document.getElementById("container")
+
+    function Username(){
+return  <div className="form-element">
+      <label htmlfor="username">username</label>
+      <input type="text"/>
+    </div>
+    }
+
+    function Password(){
+  return    <div className="form-element">
+      <label htmlfor="password">password</label>
+      <input type="text"/>
+    </div>
+    }
+
+    function Submit(){
+   return   <button type="submit" className="btn btn-success">submit</button>
+    }
+function Loginform(){
+ return
+  <form>
+  <Username/>
+  <Password/>
+  <Submit/>
+  </form>
+}
+
+ReactDOM.render(<Loginform/>,container)
+  </script>
+</body>
+</html>

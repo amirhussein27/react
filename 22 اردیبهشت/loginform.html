@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <div id=root></div>
+</head>
+<body style="background-color: rgb(59, 193, 255);">
+  <div id="container"></div>
+  <!-- <form>
+    <div class="form-element">
+      <label for="username">username</label>
+      <input type="text">
+    </div>
+    <div class="form-element">
+      <label for="password">password</label>
+      <input type="text">
+    </div>
+    <button type="submit">submit</button>
+  </form> -->
+  <script type="text/babel">
+    let container=document.getElementById("container")
+function Loginform(){
+ return <form>
+    <div className="form-element">
+      <label htmlfor="username">username</label>
+      <input type="text"/>
+    </div>
+    <div className="form-element">
+      <label htmlfor="password">password</label>
+      <input type="text"/>
+    </div>
+    <button type="submit">submit</button>
+  </form>
+}
+
+ReactDOM.render(<Loginform/>,container)
+  </script>
+</body>
+</html>
