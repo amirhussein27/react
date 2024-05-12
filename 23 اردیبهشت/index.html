@@ -21,12 +21,18 @@ return 'hello' + user.name+''+user.last;
 
       function Hello(props){
         console.log(props);
-        return<div>hello{props.name}{props.last}</div>
+        return<div>
+         <div>   hello{props.name}{props.last}</div>
+         {props.children}
+            </div>
       }
+      let element=<Hello name="Amin" last="Esn">
+            <div>greeting</div>
+            </Hello>
 
       const container = document.getElementById('mydiv');
       const root = ReactDOM.createRoot(container);
-      root.render(<Hello name="Amir" last="Esh"/>)
+      root.render(element)
     </script>
 </body>
 </html>
