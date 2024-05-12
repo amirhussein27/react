@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <script type="text/babel">
+function hello(user){
+return 'hello' + user.name+''+user.last;
+}
+// const container = document.getElementById('mydiv');
+//       const root = ReactDOM.createRoot(container);
+//       root.render(<Hello />)
+
+      console.log(Hello({name:'mojtaba',last:'soori'}));
+
+      function Hello(props){
+        console.log(props);
+        return<div>hello{props.name}{props.last}</div>
+      }
+
+      const container = document.getElementById('mydiv');
+      const root = ReactDOM.createRoot(container);
+      root.render(<Hello name="Amir" last="Esh"/>)
+    </script>
+</body>
+</html>
