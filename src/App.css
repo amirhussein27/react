@@ -1,5 +1,12 @@
 body {
-  background-color:#EAF2E3;
+  background-color:#d4ffae;
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+.box{
+	width: 300px;
 }
 
 .button {
