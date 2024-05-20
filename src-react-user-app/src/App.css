@@ -1,0 +1,30 @@
+body{
+	background-color: lightblue;
+}
+.conatiner{
+
+}
+.user{
+width: 290px;
+height: 20px;
+border:  1px solid red;
+margin-bottom: 20px;
+border-radius: 15px;
+background-color: gainsboro;
+}
+
+.content{
+	width: 290px;
+	border:  1px solid red;
+	height: 200px;
+	border-radius: 15px;
+	background-color: gainsboro;
+	
+}
+
+.mspan{
+	margin-left: 4px;
+}
+.mp{
+	margin-left: 4px;
+}
